@@ -23,5 +23,5 @@ WORKDIR /home/works/program
 COPY ./conf/chatgpt.conf ./conf/chatgpt.conf
 COPY --from=builder /bin/chatgpt-wecom .
 
-EXPOSE 80
+EXPOSE 8000
 CMD ["./chatgpt-wecom", "-conf=conf/chatgpt.conf"]
