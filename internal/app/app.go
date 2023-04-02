@@ -21,8 +21,12 @@ import (
 func Run(cfg *config.Config) {
 	log.Info().Msgf("Config: %v", cfg)
 
+	apiKey = os.Getenv("OPENAI_API_KEY")
+
+	log.Info().Msgf("apiKey: %s", apiKey)
+
 	// 初始化 gpt client
-	gptClient := openai.NewClient(cfg.GPT.ApiKey)
+	gptClient := openai.NewClient(apiKey)
 
 	// 初始化数据库 client
 	dbConf := cfg.Database
