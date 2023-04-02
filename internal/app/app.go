@@ -21,7 +21,8 @@ import (
 func Run(cfg *config.Config) {
 	log.Info().Msgf("Config: %v", cfg)
 
-	apiKey = os.Getenv("OPENAI_API_KEY")
+
+	apiKey := os.Getenv("OPENAI_API_KEY")
 
 	log.Info().Msgf("apiKey: %s", apiKey)
 
